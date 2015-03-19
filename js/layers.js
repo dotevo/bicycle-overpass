@@ -1,3 +1,10 @@
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 Object.size = function(obj) {
 	var size = 0, key;
 	for (key in obj) {
@@ -202,7 +209,9 @@ L.OwnLayersPack = L.Class.extend({
 				//cycleways
 				'way["highway"="cycleway"](%BBOX%);'+
 				'way["highway"="footway"]["bicycle"="yes"](%BBOX%);'+
+				 ((getParameterByName('full')=='yes')?'way["highway"](%BBOX%);':'')+
 				'way["bicycle"="designated"](%BBOX%););out geom;';
+
 		var _this = this;
 	 	this._wayfetcher = new L.OverpassFetcher({
 			minZoom:13,
@@ -252,44 +261,75 @@ L.OwnLayersPack = L.Class.extend({
 		var el = layer.el;
 		var ll = layer.getLatLngs();
 		//TODO I CAN DO IT MUCH BETTER
-		if(this._checkTag(el.tags,"bicycle:lanes","designated","~")){
-			var lanes = el.tags["bicycle:lanes"].split("|");
-			var lanes_tt;
-			if(el.tags["turn:lanes"]!= undefined)
-			 	lanes_tt = el.tags["turn:lanes"].split("|");
+		if(this._checkTag(el.tags,"bicycle:lanes","designated","~") || 
+				((getParameterByName('full')=='yes')&&this._checkTag(el.tags,"turn:lanes","no","!=")) ){
+
 			var i = 0;
-			for(var lane in lanes){
+			var pars = new Array();
+			//BICYCLE
+			if(el.tags["bicycle:lanes"]!= undefined){
+				var lanes_tt = el.tags["bicycle:lanes"].split("|");
+				i = 0;
+				for(var lane in lanes_tt){
+					if(pars[i] == undefined)
+						pars.push({});
+					pars[i]['bicycle'] = lanes_tt[lane];
+					i++;	
+				}
+			}
+			//TURN			
+			if(el.tags["turn:lanes"]!= undefined){
+			 	var lanes_tt = el.tags["turn:lanes"].split("|");
+				i = 0;
+				for(var lane in lanes_tt){
+					if(pars[i] == undefined)
+						pars.push({});
+					pars[i]['turn'] = lanes_tt[lane];
+					i++;	
+				}
+			}
+
+			if(pars.length == 0){
+				var n = L.polyline( ll);
+				n.setStyle({'color': 'yellow','weight':8});
+				this._waysZoomedLayer.addLayer(n);
+			}
+
+			for(i=0;i<pars.length;++i){
 				var n = L.polyline( ll);
 				var color;var opacity = 0.8;
-				if(lanes[lane] == 'no')
+
+				if(pars[i]['bicycle'] == undefined || pars[i]['bicycle'] == 'no')
 					color = 'black';
-				else if(lanes[lane] == 'yes')
+				else if(pars[i]['bicycle'] == 'yes')
 					color = 'blue';
-				else if(lanes[lane] == 'designated'){
+				else if(pars[i]['bicycle'] == 'designated'){
 					color = 'red';
 					opacity = 1;
 				}
-
-				n.setStyle({'color': color,'opacity':opacity,'weight':8});
-				n.setOffset((i-lanes.length/2+1)*10);
-				if(lanes_tt != undefined && lanes.length == lanes_tt.length){
-					var text = " ";
-					if(lanes_tt[lane].search("right") > -1){
+				var text ='';
+				if(pars[i]['turn'] == undefined || pars[i]['turn'] == 'no')
+					text += '';
+				else{
+					if(pars[i]['turn'].search("right") > -1)
 						text += ' \u21B1 ';
-					} if(lanes_tt[lane].search("left") > -1){
+					if(pars[i]['turn'].search("left") > -1)
 						text += ' \u21B0  ';
-					} if(lanes_tt[lane].search("through") > -1){
+					if(pars[i]['turn'].search("through") > -1)
 						text += '\u2191 ';
-					}
+
 					n.setText(text, {repeat: true,
                             offset: -3,
                             attributes: {fill: '#FFFFFF',
                                          'font-weight': 'bold',
                                          'font-size': '10','rotate':'90'}});
+					
 				}
+				console.log(pars[i]);
+				n.setStyle({'color': color,'opacity':opacity,'weight':8});
+				n.setOffset((i-pars.length/2+1)*10);
 
 				this._waysZoomedLayer.addLayer(n);
-				++i;
 			}
 		}else{
 			var lanesP = [];
@@ -406,7 +446,7 @@ L.OwnLayersPack = L.Class.extend({
 
 	_createWay: function(ll,el){
 		var feature = L.polyline( ll);
-		var color = "blue";
+		var color = "white";
 
 		//Eq foot==bicycle
 		if(this._checkTag(el.tags,"foot","designated",'=') && this._checkTag(el.tags,"highway","cycleway",'=')

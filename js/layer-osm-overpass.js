@@ -47,8 +47,6 @@ L.OverpassQueue = L.Class.extend({
 });
 
 
-
-
 L.OverpassFetcher = L.LayerGroup.extend({
 	options: {
 			
