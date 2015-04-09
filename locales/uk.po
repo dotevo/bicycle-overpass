@@ -1,0 +1,88 @@
+# Language: Український
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-13 12:08+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Serhij Dubyk <serhijdubyk@gmail.com>\n"
+"Language-Team: \n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Language: Ukrainian\n"
+"X-Poedit-Country: UKRAINE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../js/main.js:91
+#, perl-format
+msgid "Map data &copy; %s contributors"
+msgstr "Дані мапи &copy; %s і учасників."
+
+#: ../js/main.js:92
+#, perl-format
+msgid "Uses %s"
+msgstr "Використовує %s"
+
+msgid "Asphalt"
+msgstr "Асфальт"
+
+msgid "Colour on the map means trail colour"
+msgstr "Колір на мапі означає колір траси"
+
+msgid "Cycleway"
+msgstr "Велосипедна доріжка"
+
+msgid "Cycleways"
+msgstr "Велосипедні доріжки"
+
+msgid "Hazard"
+msgstr "Небезпека"
+
+msgid "Hazards"
+msgstr "Небезпеки"
+
+msgid "Hover over the button"
+msgstr "Наведіть курсор миші на кнопку"
+
+msgid "Lane"
+msgstr "Смуга"
+
+msgid "Loading"
+msgstr "Завантажується"
+
+msgid "Not a one-way road for bicycles"
+msgstr "Дорога, що не є односторонньою для велосипедів"
+
+msgid "No data"
+msgstr "Немає даних"
+
+msgid "Opposite lane"
+msgstr "Зустрічна смуга"
+
+msgid "Parking"
+msgstr "Велопарковка"
+
+msgid "Paving stones"
+msgstr "Бруківка"
+
+msgid "Please, zoom in"
+msgstr "Будь ласка, наблизьтесь"
+
+msgid "POIs"
+msgstr "Цікаві точки"
+
+msgid "Repair station"
+msgstr "Веломайстерня"
+
+msgid "Shared cycle way"
+msgstr "Суміщена велосипедна доріжка"
+
+msgid "Shop"
+msgstr "Веломагазин"
+
+msgid "Trails"
+msgstr "Траси"
+
