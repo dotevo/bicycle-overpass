@@ -83,8 +83,3 @@ msgstr "Sklep"
 msgid "Trails"
 msgstr "Szlaki"
 
-#~ msgid "lanes"
-#~ msgstr "Pasy"
-
-#~ msgid "shops"
-#~ msgstr "Sklepy"

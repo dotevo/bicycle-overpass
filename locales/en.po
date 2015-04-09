@@ -83,11 +83,3 @@ msgstr "Shop"
 msgid "Trails"
 msgstr "Trails"
 
-#~ msgid "index.lanes"
-#~ msgstr "Lanes"
-
-#~ msgid "index.parkings"
-#~ msgstr "Parkings"
-
-#~ msgid "index.shops"
-#~ msgstr "Shops"
