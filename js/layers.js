@@ -144,8 +144,8 @@ L.OwnLayersPack = L.Class.extend({
 	},
 
 	_addPOIPart: function (){
-		var selector = "(node[amenity=bicycle_parking](%BBOX%);node[amenity=bicycle_repair_station](%BBOX%);node[shop=bicycle](%BBOX%););out;"+
-					"(way[amenity=bicycle_parking](%BBOX%);way[amenity=bicycle_repair_station](%BBOX%);way[shop=bicycle](%BBOX%););out center;";
+		var selector = "(node[amenity=bicycle_parking](%BBOX%);node[amenity=bicycle_rental](%BBOX%);node[amenity=bicycle_repair_station](%BBOX%);node[shop=bicycle](%BBOX%););out;"+
+					"(way[amenity=bicycle_parking](%BBOX%);way[amenity=bicycle_rental](%BBOX%);way[amenity=bicycle_repair_station](%BBOX%);way[shop=bicycle](%BBOX%););out center;";
 
 		this._poifetcher = new L.OverpassFetcher({
 					minZoom:13,

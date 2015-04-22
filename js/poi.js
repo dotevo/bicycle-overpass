@@ -61,10 +61,10 @@ L.MarkerPOI = L.Marker.extend({
 	_getIcon: function(){
 		var icon_name = this._getIconSource();
 		return L.divIcon({
-			html:"<div class='pois-sprite pois-sprite-"+icon_name+" half-size'></div>",
+			html:"<div class='pois-sprite pois-sprite-"+icon_name+"'></div>",
 
-			iconSize: [16, 18],
-			iconAnchor: [8, 18],
+			iconSize: [22, 22],
+			iconAnchor: [11, 11],
 			});
 	}
 });

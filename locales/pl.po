@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-13 12:08+0100\n"
+"POT-Creation-Date: 2015-04-22 22:36+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Adam Jordanek <dotevo@gmail.com>\n"
 "Language-Team: \n"
@@ -13,12 +13,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../js/main.js:91
+#: ../js/main.js:103
 #, perl-format
 msgid "Map data &copy; %s contributors"
 msgstr "Dane mapy &copy; %s autorzy"
 
-#: ../js/main.js:92
+#: ../js/main.js:104
 #, perl-format
 msgid "Uses %s"
 msgstr "Używa %s"
@@ -70,6 +70,9 @@ msgstr "Przybliż proszę"
 
 msgid "POIs"
 msgstr "Punkty"
+
+msgid "Rental"
+msgstr "Wypożyczalnia"
 
 msgid "Repair station"
 msgstr "Stacja naprawcza"

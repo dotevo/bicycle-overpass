@@ -149,6 +149,7 @@ function afterInit(){
 	$("#nav-pois").on("mouseenter",function(){
 		box.setText('<div class="pois-sprite pois-sprite-shop-bicycle"></div><i id="#text-leg" class="legend-text" data-i18n="Shop"></i><br/>'+
 			'<div class="pois-sprite pois-sprite-amenity-bicycle_repair_station"></div><i id="#text-leg" class="legend-text" data-i18n="Repair station"></i><br/>'+
+			'<div class="pois-sprite pois-sprite-amenity-bicycle_rental"></div><i id="#text-leg" class="legend-text" data-i18n="Rental"></i><br/>'+
 			'<div class="pois-sprite pois-sprite-amenity-bicycle_parking"></div><i id="#text-leg" class="legend-text" data-i18n="Parking"></i><br/>'
 			);
 		$(".legend-text").i18n();

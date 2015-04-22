@@ -44,12 +44,6 @@ tr, td, th {
 	z-index: 999 !important;
 }
 
-.half-size{
-    zoom:0.5;
-    -moz-transform:scale(0.5);
-    -moz-transform-origin: 0 0;
-}
-
 .ui-field-contain{
 	margin: 0px;
 }

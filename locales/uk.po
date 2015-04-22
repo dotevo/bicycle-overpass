@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-13 12:08+0100\n"
+"POT-Creation-Date: 2015-04-22 22:36+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Serhij Dubyk <serhijdubyk@gmail.com>\n"
 "Language-Team: \n"
@@ -12,16 +12,14 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
-"X-Poedit-Language: Ukrainian\n"
-"X-Poedit-Country: UKRAINE\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../js/main.js:91
+#: ../js/main.js:103
 #, perl-format
 msgid "Map data &copy; %s contributors"
 msgstr "Дані мапи &copy; %s і учасників."
 
-#: ../js/main.js:92
+#: ../js/main.js:104
 #, perl-format
 msgid "Uses %s"
 msgstr "Використовує %s"
@@ -74,6 +72,9 @@ msgstr "Будь ласка, наблизьтесь"
 msgid "POIs"
 msgstr "Цікаві точки"
 
+msgid "Rental"
+msgstr "Прокат велосипедів"
+
 msgid "Repair station"
 msgstr "Веломайстерня"
 
@@ -85,4 +86,3 @@ msgstr "Веломагазин"
 
 msgid "Trails"
 msgstr "Траси"
-
