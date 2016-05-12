@@ -219,7 +219,7 @@ function afterInit(){
 		setCookie("lat", map.getCenter().lat,64);
 		setCookie("lon", map.getCenter().lng,64);
 		setCookie("zoom",map.getZoom(),     64);
-		permalinkBox.setText("<a rel='external' data-ajax='false' href='http://bicycle.osm24.eu/?lat="+map.getCenter().lat+
+		permalinkBox.setText("<a rel='external' data-ajax='false' href='index.html?lat="+map.getCenter().lat+
 							"&lon="+map.getCenter().lng+"&zoom="+map.getZoom()+"'>Permalink</a>");
 	} );
 
