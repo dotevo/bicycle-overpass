@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bicycle - osm24</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css"/>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+	<link href="http://leaflet.github.com/Leaflet.label/leaflet.label.css" rel="stylesheet" />
+
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.js"></script>
+	<script src="http://cdn.jsdelivr.net/i18next/1.7.7/i18next.min.js"></script>
+
+
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+	<script src="http://leaflet.github.com/Leaflet.label/leaflet.label.js"></script>
+	<script src="http://bbecquet.github.io/Leaflet.PolylineOffset/leaflet.polylineoffset.js"></script>
+	<script src="http://makinacorpus.github.io/Leaflet.TextPath/leaflet.textpath.js"></script>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="res/pois-sprite.css"/>
+</head>
+<body onload="loadme()">
+<div id="page" data-role="page" class="type-index">
+	<div id="content" class="ui-content" data-role="content">
+		<div id="map" width="100" height="100"></div>
+	</div>
+	<div data-role="footer" class="ui-footer fixedFooter" data-position="fixed" data-tap-toggle="true">	
+		<div class="ui-grid-d ui-responsive">
+			<div class="ui-block-a">
+				<a id="nav-hazards" class="ui-shadow ui-btn ui-corner-all toogle-button ui-btn-active" data-i18n="Hazards">Hazards</a>
+			</div>
+			<div class="ui-block-b">
+				<a id="nav-pois" class="ui-shadow ui-btn ui-corner-all toogle-button ui-btn-active" data-i18n="POIs">POIs</a>
+			</div>
+			<div class="ui-block-c">
+				<a id="nav-cycleways" class="ui-shadow ui-btn ui-corner-all toogle-button ui-btn-active" data-toogle-group="layer" data-i18n="Cycleways">Cycleways</a>
+			</div>
+			<div class="ui-block-d">
+				<a id="nav-trails" class="ui-shadow ui-btn ui-corner-all toogle-button" data-toogle-group="layer" data-i18n="Trails">Trails</a>
+			</div>
+			<div class="ui-block-e">
+				<div class="ui-field-contain"><select id="languages" data-mini="true"></select></div>
+			</div>
+		</div>
+	</div><!-- /footer -->
+</div>
+<script src="js/poi.js"></script>
+<script src="js/layer-osm-overpass.js"></script>
+<script src="js/lanes_layer.js"></script>
+<script src="js/layers.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

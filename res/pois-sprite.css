@@ -1,0 +1,28 @@
+.pois-sprite {
+	background:url('pois-sprite.png') no-repeat top left; display:inline-block;
+}
+.pois-sprite-amenity-bicycle_parking {
+	background-position:0 -0px;
+	width: 22px;
+	height: 22px;
+}
+.pois-sprite-amenity-bicycle_rental {
+	background-position:0 -22px;
+	width: 22px;
+	height: 22px;
+}
+.pois-sprite-amenity-bicycle_repair_station {
+	background-position:0 -44px;
+	width: 22px;
+	height: 22px;
+}
+.pois-sprite-hazard__bicycle {
+	background-position:0 -66px;
+	width: 22px;
+	height: 22px;
+}
+.pois-sprite-shop-bicycle {
+	background-position:0 -88px;
+	width: 22px;
+	height: 22px;
+}
