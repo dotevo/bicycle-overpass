@@ -138,7 +138,7 @@ function afterInit(){
 	adBox = new Box();
 	adBox.setPosition('bottomright');
 	map.addControl(adBox);
-	var adString ='<a onClick="closeAd();">X</a><br/><iframe scrolling="no" style="border: 0; width: 120px; height: 240px;" src="http://coinurl.com/get.php?id=33833&search=bicycle,sport"></iframe>';
+	var adString ='<a onClick="closeAd();">X</a><iframe data-aa="1157636" src="//ad.a-ads.com/1157636?size=120x240" scrolling="no" style="width:120px; height:240px; border:0px; padding:0; overflow:hidden" allowtransparency="true"></iframe><br/>';
 	adBox.setText(adString);
 	setInterval(function () {adBox.setText(adString);}, 60000*5);
 
